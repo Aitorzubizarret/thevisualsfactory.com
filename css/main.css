@@ -95,7 +95,14 @@ body {
 */
 .home {
 	display: inline-block;
-	background-image: url(../img/cover-images/home2.jpg);
+	background-image: url(../img/cover-images/logo-home.png), url(../img/cover-images/home.jpg);
+	background-repeat: no-repeat;
+	background-position: center 50px, top left;
+
+	-webkit-background-size: auto auto, cover;
+	-moz-background-size: auto auto, cover;
+	-o-background-size: auto auto, cover;
+	background-size: auto auto, cover;
 }
 /*************************************
 	Gallery
