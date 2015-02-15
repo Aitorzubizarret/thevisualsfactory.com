@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+@font-face {
+    font-family: menuFont;
+    src: url(../fonts/menu.ttf);
+}
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+/*************************************
+	Wrapper
+*/
+.wrapper {
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+/*************************************
+	Menu
+*/
+.menu {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 111px;
+	padding: 5px;
+	background-color: #fff;
+	border-top: 1px solid #CFCFCF;
+	font: 0.92em menuFont;
+	color: #444;
+	text-transform: uppercase;
+}
+.thevisualsfactorylogo {
+	width: 85px;
+	height: 100px;
+	margin: 0 40px;
+	display: inline-block;
+}
+.menu ul {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	list-style: none;
+}
+.apartados {
+	width: 55%;
+	position: absolute;
+	top: 60px;
+	background-color: #ddd;
+}
+.social {
+	position: absolute;;
+	right: 0;
+	width: 25%;
+	background-color: #eee;
+}
+.menu > ul > li {
+	display: inline-block;
+	padding-right: 30px;
+}
+.menu > ul > li > a {
+	color: #888;
+	text-decoration: none;
+}
+/*************************************
+	Content
+*/
+.content,
+.panel {
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+}
+.panel {
+
+}
+/*************************************
+	Home
+*/
+.home {
+	display: inline-block;
+	background-image: url(../img/cover-images/home2.jpg);
+}
+/*************************************
+	Gallery
+*/
+.gallery {
+	display: none;
+}
+/*************************************
+	About
+*/
+.about {
+	display: none;
+}
+/*************************************
+	Team
+*/
+.team {
+	display: none;
+}
+/*************************************
+	Workflow
+*/
+.workflow {
+	display: none;
+}
+/*************************************
+	Upload
+*/
+.upload {
+	display: none;
+}
+/*************************************
+	Contact
+*/
+.contact {
+	display: none;
+}
