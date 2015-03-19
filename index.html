@@ -2,30 +2,93 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
 	<link rel="stylesheet" href="css/main.css">
 	<title>The Visuals factory</title>
 </head>
 <body>
 	<div class="wrapper">
 		<div class="content">
-			<div class="home panel"></div>
-			<div class="gallery panel">gallery</div>
-			<div class="about panel">about</div>
-			<div class="team panel">team</div>
-			<div class="workflow panel">workflow</div>
-			<div class="upload panel">upload</div>
-			<div class="contact panel">contact</div>
+			<div id="home" class="panel show"></div>
+			<div id="gallery" class="panel hide">gallery</div>
+			<div id="about" class="panel hide">
+				<div class="textBlock">
+					<h2>Sobre nosotros</h2>
+					<p>
+						The Visuals Factory está especializada en dar apoyo para la visualización de espacios arquitectónicos sin construir. Elaboramos la representación de proyectos de arquitectura por medio de imágenes y renders.
+					</p>
+					<p>
+						El proceso de trabajo se acuerda de forma que favorezca en todo lo posible al arquitecto o estudio para garantizar la máxima eficiencia y facilidad en la elaboración.
+					</p>
+					<h2>About Us</h2>
+					<p>
+						The Visuals Factory is specialized in supporting the visualization of unique unbuilt architecture spaces. We elaborate the representation of architectural projects through high quality images and renderings.
+					</p>
+					<p>
+						The working process is agreed with the office or architect to ensure the efficiency and facilitate the elaboration process.
+					</p>
+				</div>
+			</div>
+			<div id="team" class="panel hide">
+				<div class="textBlock">
+					<h2>Equipo</h2>
+					<p>
+						Alberto Herzog, arquitecto por la Univerdad de Navarra, ha trabajado para Bjarke Ingels Group (BIG) en Copenhague y K&H Architects en Tokyo.
+					</p>
+					<p>
+						Mikel Ruiz Napal, arquitecto por la Universidad de Navarra, ha trabajado para de Architekten Cie en Amsterdam, Ten arquitectos en Nueva York y Francisco Mangado y Asociados en Pamplona, España.
+					</p>
+					<h2>Team</h2>
+					<p>
+						Architect by the University of Navarra, has worked for Bjarke Ingels Group (BIG) in Copenhagen and K&H Architects in Tokyo.
+					</p>
+					<p>
+						Architect by the University of Navarra, has worked for de Architekten Cie in Amsterdam, Ten Arquitectos in New York and Francisco Mangado y Asociados in Pamplona, Spain.
+					</p>
+				</div>
+			</div>
+			<div id="workflow" class="panel hide">
+				<div class="textBlock">
+					<h2>Equipo</h2>
+					<a href=""></a>
+					<a href=""></a>
+				</div>
+			</div>
+			<div id="upload" class="panel hide">
+				<div class="textBlock">
+					<h2>Subir archivos</h2>
+					<p>
+						Para facilitar la transferencia de archivos, adjuntamos un enlace a Wetransfer. Aseguraros de escribir info@thevisualsfactory.com en el receptor.
+					</p>
+					<a href=""></a>
+					<h2>Upload files</h2>
+					<p>
+						To simplify the file transference, we attach a link to Wetransfer. Be sure to write down info@thevisualsfactory.com in the recipient field.
+					</p>
+					<a href=""></a>
+				</div>
+			</div>
+			<div id="contact" class="panel hide">
+				<div class="textBlock">
+					<img src="" alt="">
+					<h2>Contact</h2>
+					<p>
+						<span>E-mail:</span>
+						<a href="mailto:thevisualsfactory@gmail.com">thevisualsfactory@gmail.com</a>
+					</p>
+				</div>
+			</div>
 		</div>
 		<div class="menu">
 			<img src="img/logo-white-menu.png" alt="Logo" class="thevisualsfactorylogo">
 			<ul class="apartados">
-				<li><a href="">Home</a></li>
-				<li><a href="">Gallery</a></li>
-				<li><a href="">About</a></li>
-				<li><a href="">Team</a></li>
-				<li><a href="">Workflow</a></li>
-				<li><a href="">Upload</a></li>
-				<li><a href="">Contact</a></li>
+				<li><a onclick="showPanel('home')" href="">Home</a></li>
+				<li><a onclick="showPanel('gallery')" href="" class="selected">Gallery</a></li>
+				<li><a onclick="showPanel('about')" href="">About</a></li>
+				<li><a onclick="showPanel('team')" href="">Team</a></li>
+				<li><a onclick="showPanel('workflow')" href="">Workflow</a></li>
+				<li><a onclick="showPanel('upload')" href="">Upload</a></li>
+				<li><a onclick="showPanel('contact')" href="">Contact</a></li>
 			</ul>
 			<ul class="social">
 				<li><a href=""><img src="img/social/facebook.png" alt="Facebook logo"></a></li>
@@ -34,5 +97,8 @@
 			</ul>
 		</div>
 	</div>
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="lightbox.min.js"></script>
 </body>
 </html>
