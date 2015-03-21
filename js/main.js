@@ -1,6 +1,27 @@
-function showPanel(id) {
+window.onload = function() {
+    // Apartados de la web
+    var apartados = ["home", "gallery", "about", "team", "workflow", "upload", "contact"];
 
-    console.log("hello1");
+    // Obtener los elementos de la web que nos interesan
+    var menuUL = document.getElementById("menu");
+
+    // Funciones
+    var showSection = function(e) {
+        console.log(e.target.id);
+        for (var i = 0; i < apartados.length; i++) {
+            var seccion = document.getElementById(apartados[i]);
+            seccion.classList.remove("show");
+            seccion.classList.add("hide")
+        };
+        var elegido = document.getElementById(e.target.id);
+        elegido.classList.add("show");
+    };
+
+    // Listener
+    menuUL.addEventListener("click", showSection, false)
+
+}
+function showPanel(id) {
 
     // Apartados de la web
     var apartados = ["home", "gallery", "about", "team", "workflow", "upload", "contact"];
