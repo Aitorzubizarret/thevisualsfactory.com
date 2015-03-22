@@ -1,20 +1,27 @@
 window.onload = function() {
-    // Apartados de la web
-    var apartados = ["home", "gallery", "about", "team", "workflow", "upload", "contact"];
+    // Obtenemos el contenido y miramos cuantos apartados tiene
+    var contenido = document.getElementById("content");
+    var apartados = [];
+    for (var i = 0; i < contenido.children.length; i++) {
+        apartados[i] = contenido.children[i].id;
+    };
 
     // Obtener los elementos de la web que nos interesan
-    var menuUL = document.getElementById("menu");
+    var menuUL = document.getElementById("apartados");
 
     // Funciones
     var showSection = function(e) {
-        console.log(e.target.id);
-        for (var i = 0; i < apartados.length; i++) {
-            var seccion = document.getElementById(apartados[i]);
-            seccion.classList.remove("show");
-            seccion.classList.add("hide")
-        };
-        var elegido = document.getElementById(e.target.id);
-        elegido.classList.add("show");
+        if (e.target.nodeName === 'A') {
+            for (var i = 0; i < apartados.length; i++) {
+                var section = document.getElementById(apartados[i]);
+                section.classList.remove("show");
+                section.classList.add("hide")
+            };
+            var selectedSectionID = e.target.id;
+            var selectedSection = document.getElementById(selectedSectionID.replace("Lnk", ""));
+            selectedSection.classList.remove("hide");
+            selectedSection.classList.add("show");
+        }
     };
 
     // Listener

@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+html,
+body {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+@font-face {
+    font-family: menuFont;
+    src: url(../fonts/menu.ttf);
+}
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+/*************************************
+	Wrapper
+**************************************/
+.wrapper {
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+/*************************************
+	Content
+**************************************/
+#content {
+	padding-top: 50px;
+}
+/*************************************
+	Menu
+**************************************/
+.menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 50px;
+	width: 100%;
+	background-color: #fff;
+	border-bottom: 1px solid #999;
+}
+.thevisualsfactorylogo {
+	position: fixed;
+	height: 36px;
+	margin: 7px;
+}
+.companyName {
+	display: inline-block;
+	width: 100%;
+	padding-top: 10px;
+	font-size: 1.2em;
+	text-align: center;
+	font-family: menuFont;
+	text-transform: uppercase;
+}
+.menuButton {
+	position: fixed;
+	top: 0;
+	right: 0;
+	height: 22px;
+	margin: 14px;
+}
+#apartados,
+#social {
+	display: none;
+}
+@media (min-width: 768px) {
+	.menu {
+		background-color: #444;
+	}
+}
