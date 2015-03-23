@@ -1,32 +1,64 @@
 window.onload = function() {
-    // Obtenemos el contenido y miramos cuantos apartados tiene
+    // Obtener los elementos de la web que nos interesan
+    var menuUL = document.getElementById("apartados");
+    var menuButton = document.getElementById("menuButton");
+    var menuApartados = document.getElementById("apartados");
+    var menuSocial = document.getElementById("social");
     var contenido = document.getElementById("content");
+    var gallerySection = document.getElementById("gallery");
+
+    // Obtenemos los apartados que tiene el contenido
     var apartados = [];
     for (var i = 0; i < contenido.children.length; i++) {
         apartados[i] = contenido.children[i].id;
     };
 
-    // Obtener los elementos de la web que nos interesan
-    var menuUL = document.getElementById("apartados");
-
     // Funciones
     var showSection = function(e) {
+        // Comprobaremos que ha hecho click en un enlace
         if (e.target.nodeName === 'A') {
+            // Ocultamos todos los apartados
             for (var i = 0; i < apartados.length; i++) {
                 var section = document.getElementById(apartados[i]);
                 section.classList.remove("show");
                 section.classList.add("hide")
             };
+            // Mostramos el apartado del enlace que ha recibido el click
             var selectedSectionID = e.target.id;
             var selectedSection = document.getElementById(selectedSectionID.replace("Lnk", ""));
             selectedSection.classList.remove("hide");
             selectedSection.classList.add("show");
+            toggleMenuPanel(); // Después de hacer click en el link se ocultará el menú para ver el contenido
         }
     };
+    var toggleMenuPanel = function(e) {
+        // Mostramos u ocultamos los apartados del menú
+        menuApartados.classList.toggle("show");
+        menuApartados.classList.toggle("hide");
+        // Mostramos u ocultamos los enlaces a distintas redes sociales
+        menuSocial.classList.toggle("show");
+        menuSocial.classList.toggle("hide");
+    }
+    var cargarGaleria = function(e) {
+        console.log("funcion cargarGaleria");
+        
+        /*
+        $.getJSON('photos.json', function(data) {
+            var output = '<img src="img/logo-galeria.png" alt="" />';
+            output += '<ul id="galeria">';
+            for (var i in data.photos) {
+                output += '<li><a href="img' + data.photos[i].full + '" data-lightbox="example-set" data-title="' + data.photos[i].title + '"><img src="img' + data.photos[i].thumb + '" alt=""/></a></li>';
+            }
+            output += "</ul>";
+            document.getElementById("gallery").innerHTML=output;
+        });
+        */
+    }
+    cargarGaleria();
 
-    // Listener
-    menuUL.addEventListener("click", showSection, false)
-
+    // Listeners
+    menuUL.addEventListener("click", showSection, false);
+    menuButton.addEventListener("click", toggleMenuPanel, false);
 }
 function showPanel(id) {
 
