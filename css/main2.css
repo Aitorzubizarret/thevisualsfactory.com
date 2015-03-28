@@ -132,6 +132,11 @@ body {
 	text-decoration: none;
 	color: #515151;
 }
+.contactTitle {
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 10px;
+}
 .strong {
 	font-weight: bold;
 }
