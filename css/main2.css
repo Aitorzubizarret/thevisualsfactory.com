@@ -48,11 +48,15 @@ body {
 	color: #515151;
 	text-align: justify;
 }
-.textBlock h2 {
+section {
+	max-width: 715px;
+	margin: 0 auto 30px auto;
+}
+section h2 {
 	font-size: 1.1em;
 	text-transform: uppercase;
 }
-.textBlock p {
+section p {
 	font-size: 0.9em;
 	padding: 0 5px;
 }
@@ -110,7 +114,7 @@ body {
 #social {
 	border-bottom: 1px solid #e9e9e9;
 }
-@media (min-width: 768px) {
+@media (min-width: 960px) {
 	.menu {
 		background-color: #444;
 	}
