@@ -143,20 +143,72 @@ body {
 /*************************************
 	Gallery
 **************************************/
-#gallery ul {
+#gallery {
+	margin: 10px auto;
+}
+#gallery_grid {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	margin: 0 auto;
+	font-size: 0; /* Para que no haya espacios entre las fotos */
 }
-#gallery ul li {
-	width: 139px;
-	height: 136px;
-	background-color: #888;
+#gallery_grid li {
+	font-size: 0; /* Para que no haya espacios entre las fotos */
 	display: inline-block;
-	margin: 0 5px 5px 0;
-}
-#gallery ul li img {
 	margin: 0;
-	padding: 0;
+}
+#gallery_grid li img {
+	width: 100%;
+	max-width: 139px;
+	
+}
+/*
+	Una Columna
+*/
+@media screen and (min-width: 160px) and (max-width: 249px) {
+	#gallery_grid {
+		width: 139px;
+		margin: 0 auto;
+	}
+	#gallery_grid li {
+		margin: 0;
+	}
+}
+/*
+	Dos Columnas
+*/
+@media screen and (min-width: 250px) and (max-width: 298px) {
+	#gallery_grid li {
+		width: 50%;
+	}
+}
+/*
+	Tres Columnas
+*/
+@media screen and (min-width: 299px) and (max-width: 437px) {
+	#gallery_grid li {
+		width: 33.33333333333%;
+	}
+}
+/*
+	Cuatro Columnas
+*/
+@media screen and (min-width: 438px) and (max-width: 576px) {
+	#gallery_grid li {
+		width: 25%;
+	}
+}
+/*
+	Cinco Columnas
+*/
+@media screen and (min-width: 577px) and (max-width: 715px) {
+	#gallery_grid li {
+		width: 20%;
+	}
+}
+@media screen and (min-width: 715px) {
+	#gallery_grid {
+		width: 715px;
+		margin: 0 auto;
+	}
 }

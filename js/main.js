@@ -40,19 +40,15 @@ window.onload = function() {
         menuSocial.classList.toggle("hide");
     }
     var cargarGaleria = function(e) {
-        console.log("funcion cargarGaleria");
-        
-        /*
         $.getJSON('photos.json', function(data) {
-            var output = '<img src="img/logo-galeria.png" alt="" />';
-            output += '<ul id="galeria">';
+            var output = '';
+            output += '<ul id="gallery_grid">';
             for (var i in data.photos) {
                 output += '<li><a href="img' + data.photos[i].full + '" data-lightbox="example-set" data-title="' + data.photos[i].title + '"><img src="img' + data.photos[i].thumb + '" alt=""/></a></li>';
             }
             output += "</ul>";
             document.getElementById("gallery").innerHTML=output;
         });
-        */
     }
     cargarGaleria();
 
