@@ -1,6 +1,8 @@
 window.onload = function() {
     // Obtener los elementos de la web que nos interesan
+    var wrapper = document.getElementById("wrapper");
     var menuUL = document.getElementById("apartados");
+    var options = document.getElementById("options");
     var menuButton = document.getElementById("menuButton");
     var menuApartados = document.getElementById("apartados");
     var menuSocial = document.getElementById("social");
@@ -32,12 +34,32 @@ window.onload = function() {
         }
     };
     var toggleMenuPanel = function(e) {
-        // Mostramos u ocultamos los apartados del menú
+        /*
+            Esta función sirve para mostrar u ocultar el menú de la web.
+            Si el menú esta oculto y pulsamos el botón:
+            - Se mostrarán los apartados del menu
+            - Se mostrarán los enlaces a las redes sociales
+            - Se ocultará el contenido
+            Si el menú esta visible y pulsamos el botón:
+            - Se ocultarán los apartados del menu
+            - Se ocultarán los enlaces a las redes sociales
+            - Se mostrará el contenido
+        */
+        wrapper.classList.toggle("fullScreen");
+        // Mostramos u ocultamos el contenido de la web.
+        contenido.classList.toggle("show");
+        contenido.classList.toggle("hide");
+
+        options.classList.toggle("show");
+        options.classList.toggle("hide");
+        /*
+        // Mostramos u ocultamos los apartados del menú.
         menuApartados.classList.toggle("show");
         menuApartados.classList.toggle("hide");
-        // Mostramos u ocultamos los enlaces a distintas redes sociales
+        // Mostramos u ocultamos los enlaces a distintas redes sociales.
         menuSocial.classList.toggle("show");
         menuSocial.classList.toggle("hide");
+        */
     }
     var cargarGaleria = function(e) {
         $.getJSON('photos.json', function(data) {

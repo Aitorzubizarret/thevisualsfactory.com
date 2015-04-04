@@ -13,8 +13,8 @@
 	<title>The Visuals factory</title>
 </head>
 <body>
-	<div class="wrapper">
-		<div id="content">
+	<div id="wrapper" class="fullScreen">
+		<div id="content" class="show">
 			<div id="home" class="panel show"></div>
 			<div id="gallery" class="panel hide">
 			</div>
@@ -97,11 +97,15 @@
 				</section>
 			</div>
 		</div>
-		<div class="menu">
+		<div class="menu menuText">
 			<img src="img/logo-white-menu.png" alt="Logo" class="thevisualsfactorylogo">
 			<span class="companyName">The Visuals Factory</span>
 			<img src="img/menu.svg" alt="Botón Menú" id="menuButton">
-			<ul id="apartados" class="hide">
+			
+		</div>
+		</div>
+		<div id="options" class="menuOptions menuText hide">
+			<ul id="apartados">
 				<li><a href="#" id="homeLnk">Home</a></li>
 				<li><a href="#" id="galleryLnk" class="selected">Gallery</a></li>
 				<li><a href="#" id="aboutLnk">About Us</a></li>
@@ -110,12 +114,11 @@
 				<li><a href="#" id="uploadLnk">Upload</a></li>
 				<li><a href="#" id="contactLnk">Contact</a></li>
 			</ul>
-			<ul id="social" class="hide">
+			<ul id="social">
 				<li><a href=""><img src="img/social/facebook.png" alt="Facebook logo"></a></li>
 				<li><a href=""><img src="img/social/facebook.png" alt="Facebook logo"></a></a></li>
 				<li><a href=""><img src="img/social/facebook.png" alt="Facebook logo"></a></a></li>
 			</ul>
-		</div>
 	</div>
 	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
 	<script src="js/main.js"></script>
