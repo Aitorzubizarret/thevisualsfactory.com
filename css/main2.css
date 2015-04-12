@@ -147,14 +147,14 @@ body {
 	Content
 **************************************/
 #content {
-	padding: 50px 10px 10px 10px;
+	padding: 50px 0 0 0;
 	font: 0.95em "arial", sans-serif;
 	color: #515151;
 	text-align: justify;
 }
 section {
 	max-width: 715px;
-	margin: 0 auto 30px auto;
+	margin: 0 auto;
 }
 section h2 {
 	font-size: 1.1em;
@@ -175,14 +175,32 @@ section p {
 /*************************************
 	Panel
 **************************************/
+.panel section {
+	padding: 20px 20px 0 20px;
+}
 .panel section:last-child {
 	margin: 0 auto;
+}
+.panel section h2 {
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+/*************************************
+	Home
+**************************************/
+#home {
+	background-image: url("../img/cover-images/home.jpg");
+	min-height: 100%;
+	position: relative;
+}
+#home section {
+	margin: 0;
 }
 /*************************************
 	Gallery
 **************************************/
 #gallery {
-	margin: 10px auto 0 auto;
+	margin: 0 auto 0 auto;
 }
 #gallery_grid {
 	list-style: none;
