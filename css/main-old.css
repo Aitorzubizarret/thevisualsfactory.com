@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+}
+html,
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+@font-face {
+    font-family: menuFont;
+    src: url(../fonts/menu.ttf);
+}
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+/*************************************
+	Wrapper
+**************************************/
+.wrapper {
+	height: 100%;
+	width: 100%;
+	position: relative;
+}
+/*************************************
+	Menu
+**************************************/
+.menu {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 111px;
+	padding: 5px;
+	background-color: #fff;
+	border-top: 1px solid #CFCFCF;
+	font: 0.95em menuFont;
+	color: #444;
+	text-transform: uppercase;
+}
+.thevisualsfactorylogo {
+	width: 85px;
+	height: 100px;
+	margin: 0 40px;
+	display: inline-block;
+}
+.menu ul {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	list-style: none;
+}
+.apartados {
+	width: 55%;
+	position: absolute;
+	top: 60px;
+}
+.social {
+	position: absolute;;
+	right: 0;
+	width: 20%;
+	background-color: #eee;
+}
+.menu > ul > li {
+	display: inline-block;
+	padding-right: 40px;
+}
+.menu > ul > li > a {
+	color: #888;
+	text-decoration: none;
+}
+.menu > ul > li > a:hover {
+	border-bottom: 2px solid #888;
+}
+.selected {
+	border-bottom: 2px solid #888;
+}
+/*************************************
+	Content
+**************************************/
+#content,
+.panel {
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+}
+.textBlock {
+	position: absolute;
+	max-width: 800px;
+	height: 500px;
+	top: 50%;
+	left: 50%;
+	margin-top: -301px;
+	margin-left: -400px;
+	border: 1px solid #eee;
+}
+.show {
+	display: inline-block;
+}
+.hide {
+	display: none;
+}
+/*************************************
+	Home
+*/
+#home {
+	background-image: url(../img/cover-images/logo-home.png), url(../img/cover-images/home.jpg);
+	background-repeat: no-repeat;
+	background-position: center 50px, top left;
+
+	-webkit-background-size: auto auto, cover;
+	-moz-background-size: auto auto, cover;
+	-o-background-size: auto auto, cover;
+	background-size: auto auto, cover;
+}
+/*************************************
+	Gallery
+*/
+#gallery {
+}
+/*************************************
+	About
+*/
+#about {
+}
+/*************************************
+	Team
+*/
+#team {
+}
+/*************************************
+	Workflow
+*/
+#workflow {
+}
+/*************************************
+	Upload
+*/
+#upload {
+}
+/*************************************
+	Contact
+*/
+#contact {
+	background-image: url(../img/cover-images/logo-home.png), url(../img/cover-images/home.jpg);
+	background-repeat: no-repeat;
+	background-position: center 50px, top left;
+
+	-webkit-background-size: auto auto, cover;
+	-moz-background-size: auto auto, cover;
+	-o-background-size: auto auto, cover;
+	background-size: auto auto, cover;
+}
