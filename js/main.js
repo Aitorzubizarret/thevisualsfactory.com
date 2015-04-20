@@ -66,7 +66,7 @@ window.onload = function() {
             var output = '';
             output += '<ul id="gallery_grid">';
             for (var i in data.photos) {
-                output += '<li><a href="img' + data.photos[i].full + '" data-lightbox="example-set" data-title="' + data.photos[i].title + '"><img src="img' + data.photos[i].thumb + '" alt=""/></a></li>';
+                output += '<li><a href="img' + data.photos[i].full + '" data-title="' + data.photos[i].title + '"><img src="img' + data.photos[i].thumb + '" alt=""/></a></li>';
             }
             output += "</ul>";
             document.getElementById("gallery").innerHTML=output;
@@ -91,15 +91,15 @@ function showPanel(id) {
 
 	// Las opciones que tiene el menú.
 	var opciones = ["homeButton", "galleryButton", "aboutButton", "teamButton", "workflowButton", "uploadButton", "contactButton"];
-	
+
 	// Recorremos todas las opciones para ocultarlas y deseleccionarlas
 	for (var i = 0; i < opciones.length; i++) {
 		$(opciones[i]).addClass("selected");
 	}
-	
+
 	// Ocultamos todo
     document.getElementById("home").style.height='0%';
-    document.getElementById("home").style.display='none';    
+    document.getElementById("home").style.display='none';
     document.getElementById("gallery").style.height='0%';
     document.getElementById("gallery").style.display='none';
     document.getElementById("about").style.height='0%';
@@ -112,13 +112,13 @@ function showPanel(id) {
     document.getElementById("upload").style.display='none';
     document.getElementById("contact").style.height='0%';
     document.getElementById("contact").style.display='none';
-    
+
     // Mostramos solo el div de la opción seleccionada.
     document.getElementById(id).style.display='block';
-    
+
     // Seleccionamos nuestro contenedor para posteriormente modificar algunas propiedades dependiendo de la opción del menú.
     var element = document.getElementById("container");
-    
+
     switch (id) {
     	case "home":
     		document.getElementById("home").style.height='100%';
@@ -142,7 +142,7 @@ function showPanel(id) {
     	case "workflow":
     		document.getElementById("workflow").style.height='300px';
     		element.style.background = '#fff';
-    		break;	
+    		break;
     	case "upload":
     		document.getElementById("upload").style.height='100%';
     		element.style.background = '#fff';
@@ -155,13 +155,13 @@ function showPanel(id) {
     		element.style.backgroundPosition="center"
     		break;
     }
-    
+
     $("galleryButton").addClass("selected");
     $("homeButton").removeClass("selected");
     /*
     var menuItem = document.getElementById("homeButton");
     $(menuItem).addClass("selected");
-    
+
     $("homeButton").addClass("selected");
     */
 }
