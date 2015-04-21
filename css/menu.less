@@ -4,7 +4,6 @@
 .menu {
 	position: fixed;
 	left: 0;
-	height: auto;
 	width: 100%;
 	background-color: #fff;
 }
@@ -18,33 +17,6 @@
 	position: fixed;
 	height: 36px;
 	margin: 7px;
-}
-.companyName {
-	display: inline-block;
-	width: 100%;
-	padding-top: 19px;
-	padding-bottom: 14px;
-	font-size: 0.9em;
-	font-family: "arial";
-}
-@media screen and (min-width: 960px) {
-	.companyName {
-		font: 1em menuFont;
-		padding-top: 13px;
-	}
-	.menuText {
-		text-align: center;
-		text-transform: uppercase;
-		font: 1em menuFont;
-	}
-}
-#menuButton {
-	position: fixed;
-	top: 0;
-	right: 0;
-	height: 18px;
-	margin: 16px;
-	cursor: pointer;
 }
 .menuOptions {
 	padding-top: 50px;
@@ -99,7 +71,24 @@
 @media screen and (max-width: 959px) {
 	.menu {
 		top: 0;
+		height: 50px;
 		border-bottom: 1px solid #e9e9e9;
+	}
+	#menuButton {
+		position: fixed;
+		top: 0;
+		right: 0;
+		height: 18px;
+		margin: 16px;
+		cursor: pointer;
+	}
+	.companyName {
+		display: inline-block;
+		width: 100%;
+		padding-top: 19px;
+		padding-bottom: 14px;
+		font-size: 0.9em;
+		font-family: "arial";
 	}
 }
 /*************************************
@@ -108,6 +97,16 @@
 @media screen and (min-width: 960px) {
 	.menu {
 		bottom: 0;
+		height: 111px;
 		border-top: 1px solid #e9e9e9;
+	}
+	#menuButton {
+		display: none;
+	}
+	.companyName {
+		display: none;
+	}
+	.menuText {
+		font: 1em menuFont;
 	}
 }
