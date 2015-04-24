@@ -64,10 +64,22 @@ body {
 	Content
 **************************************/
 #content {
-	padding: 50px 0 0 0;
 	font: 0.95em "arial", sans-serif;
 	color: #515151;
 	text-align: left;
+}
+@media screen and (max-width: 959px) {
+   #content {
+      padding: 50px 0 0 0;
+   }
+}
+@media screen and (min-width: 960px) {
+   #content {
+      padding: 0;
+      font: 0.95em ptsans, sans-serif;
+      color: #515151;
+      text-align: justify;
+   }
 }
 section {
 	max-width: 715px;
@@ -80,14 +92,6 @@ section h2 {
 section p {
 	font-size: 0.9em;
 	padding: 0 5px;
-}
-@media screen and (min-width: 960px) {
-	#content {
-	padding: 50px 10px 10px 10px;
-	font: 0.95em ptsans, sans-serif;
-	color: #515151;
-	text-align: justify;
-}
 }
 /*************************************
 	Panel
