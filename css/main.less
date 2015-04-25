@@ -75,7 +75,7 @@ body {
 }
 @media screen and (min-width: 960px) {
    #content {
-      padding: 0;
+      padding: 10px 0 120px 0;
       font: 0.95em ptsans, sans-serif;
       color: #515151;
       text-align: justify;
@@ -118,6 +118,22 @@ section p {
 #home section {
 	margin: 0;
 }
-
 // Gallery
 @import "section-gallery.less";
+/*************************************
+	Animations
+**************************************/
+.showMenu {
+   -webkit-animation: slidein 5s 1;
+   -moz-animation: slidein 5s 1;
+   -o-animation: slidein 5s 1;
+   animation: slidein 5s 1;
+}
+@keyframes slidein {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}
