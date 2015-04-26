@@ -18,14 +18,12 @@
 	height: 36px;
 	margin: 7px;
 }
-#apartados,
-#social {
+.menuItems{
 	background-color: #f8f8f8;
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
-
 #apartados li a,
 #social li a {
 	color: #888;
@@ -87,8 +85,10 @@
 	.menuOptions {
 		padding-top: 50px;
 	}
-	#apartados li,
-	#social li {
+	.menuItems {
+		background-color: #f8f8f8;
+	}
+	.menuItems li {
 		padding: 10px 0;
 	}
 	.thevisualsfactorylogo {
@@ -121,10 +121,15 @@
 		left: 90px;
 		display: inline-block;
 	}
-	#apartados li,
-	#social li {
-		padding: 10px 0;
+	.menuItems{
+		background-color: #fff;
+	}
+	.menuItems li {
+		padding: 0 10px;
 		display: inline-block;
+	}
+	#social {
+		border-bottom: none;
 	}
 	.menuText {
 		font: 1em menuFont;
