@@ -52,7 +52,7 @@ window.onload = function() {
 
       options.classList.toggle("show");
       options.classList.toggle("hide");
-      options.classList.toggle("showMenu");
+      //options.classList.toggle("showMenu");
       /*
       // Mostramos u ocultamos los apartados del menú.
       menuApartados.classList.toggle("show");
