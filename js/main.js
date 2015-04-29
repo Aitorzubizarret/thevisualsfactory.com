@@ -1,4 +1,7 @@
 window.onload = function() {
+   // Variables
+   var menuButton = false;
+
    // Obtener los elementos de la web que nos interesan
    var wrapper = document.getElementById("wrapper");
    var menuUL = document.getElementById("apartados");
@@ -30,10 +33,18 @@ window.onload = function() {
          var selectedSection = document.getElementById(selectedSectionID.replace("Lnk", ""));
          selectedSection.classList.remove("hide");
          selectedSection.classList.add("show");
-         toggleMenuPanel(); // Después de hacer click en el link se ocultará el menú para ver el contenido
+         if (menuButton == true) {
+            toggleMenuPanel(); // Después de hacer click en el link se ocultará el menú para ver el contenido
+            menuButton = false;
+         }
       }
    };
    var toggleMenuPanel = function(e) {
+      if (menuButton == true) {
+         menuButton = false;
+      } else {
+         menuButton = true;
+      }
       /*
          Esta función sirve para mostrar u ocultar el menú de la web.
          Si el menú esta oculto y pulsamos el botón:
