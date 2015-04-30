@@ -7,8 +7,6 @@ window.onload = function() {
    var menuUL = document.getElementById("apartados");
    var options = document.getElementById("options");
    var menuButton = document.getElementById("menuButton");
-   var menuApartados = document.getElementById("apartados");
-   var menuSocial = document.getElementById("social");
    var contenido = document.getElementById("content");
    var gallerySection = document.getElementById("gallery");
 
@@ -61,17 +59,10 @@ window.onload = function() {
       contenido.classList.toggle("show");
       contenido.classList.toggle("hide");
 
+      // Mostramos u ocultamos los apartados del menú
+      // y los enlaces a distintas redes sociales.
       options.classList.toggle("show");
       options.classList.toggle("hide");
-      //options.classList.toggle("showMenu");
-      /*
-      // Mostramos u ocultamos los apartados del menú.
-      menuApartados.classList.toggle("show");
-      menuApartados.classList.toggle("hide");
-      // Mostramos u ocultamos los enlaces a distintas redes sociales.
-      menuSocial.classList.toggle("show");
-      menuSocial.classList.toggle("hide");
-      */
    }
    var cargarGaleria = function(e) {
       $.getJSON('photos.json', function(data) {
@@ -85,9 +76,6 @@ window.onload = function() {
       });
    }
    cargarGaleria();
-   var fineAdjustmentsToInterface = function() {
-      console.log("Hi resizer");
-   }
    var menuAnimation = function() {
 
    }
@@ -95,5 +83,4 @@ window.onload = function() {
     // Listeners
     menuUL.addEventListener("click", showSection, false);
     menuButton.addEventListener("click", toggleMenuPanel, false);
-    window.addEventListener("resize", fineAdjustmentsToInterface, false);
 }
