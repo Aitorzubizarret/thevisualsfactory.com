@@ -31,6 +31,7 @@ window.onload = function() {
          var selectedSection = document.getElementById(selectedSectionID.replace("Lnk", ""));
          selectedSection.classList.remove("hide");
          selectedSection.classList.add("show");
+         // Comprobamos el estado del menú
          if (menuButton == true) {
             toggleMenuPanel(); // Después de hacer click en el link se ocultará el menú para ver el contenido
             menuButton = false;
@@ -38,11 +39,8 @@ window.onload = function() {
       }
    };
    var toggleMenuPanel = function(e) {
-      if (menuButton == true) {
-         menuButton = false;
-      } else {
-         menuButton = true;
-      }
+      // Comprobamos el estado del menú
+      menuButton = (menuButton == true) ? false : true;
       /*
          Esta función sirve para mostrar u ocultar el menú de la web.
          Si el menú esta oculto y pulsamos el botón:
@@ -54,7 +52,7 @@ window.onload = function() {
             - Se ocultarán los enlaces a las redes sociales
             - Se mostrará el contenido
       */
-      wrapper.classList.toggle("fullScreen");
+      //wrapper.classList.toggle("fullScreen");
       // Mostramos u ocultamos el contenido de la web.
       contenido.classList.toggle("show");
       contenido.classList.toggle("hide");
